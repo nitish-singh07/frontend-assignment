@@ -20,7 +20,7 @@ const History = () => {
       condition: "Heart failure",
       date: "10/21/22",
       status: "Active",
-      avatar: "/path-to-avatar",
+      avatar: "../assets/image.png",
     },
     {
       name: "Suzana R.",
@@ -88,7 +88,26 @@ const History = () => {
 
       {patients.map((patient, index) => (
         <StyledPatientRow key={index}>
-          {/* Patient row content */}
+          <Box
+            component="img"
+            src={patient.avatar}
+            alt={patient.name}
+            sx={{
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+            }}
+          />
+          <Box sx={{ ml: 2 }}>
+            <Typography>{patient.name}</Typography>
+            <Typography variant="body2" color="text.secondary">
+              {patient.condition}
+            </Typography>
+          </Box>
+          <Typography sx={{ ml: "auto" }}>{patient.date}</Typography>
+          <Typography color="primary" sx={{ ml: 2 }}>
+            {patient.status}
+          </Typography>
         </StyledPatientRow>
       ))}
     </Box>

@@ -12,7 +12,7 @@ const HospitalWorkload = () => {
 
   return (
     <Box>
-      <Typography variant="h6">HOSPITAL WORKLOAD</Typography>
+      <Typography variant="h6">HOSPITAL WORKLOAD </Typography>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <PieChart width={200} height={200}>
           <Pie
